@@ -1,0 +1,74 @@
+name:                hspec-formatter-github
+version:             0.1.0.0
+github:              "MercuryTechnologies/hspec-formatter-github"
+license:             BSD-3-Clause
+author:              Alex Vieth, Matt von Hagen
+maintainer:          mattp@mercury.com
+copyright:           2023 Mercury Technologies
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+# Metadata used when publishing your package
+synopsis:            A Formatter for hspec that provides Github Actions Annotations
+category:            Testing
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/MercuryTechnologies/hspec-formatter-github#readme>
+
+dependencies:
+- base >= 4.14 && < 5
+- hspec-core
+- hspec-api
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+default-extensions:
+- BlockArguments
+- DataKinds
+- DefaultSignatures
+- DeriveFunctor
+- DeriveGeneric
+- DeriveLift
+- DerivingStrategies
+- DerivingVia
+- FlexibleContexts
+- FlexibleInstances
+- GADTs
+- GeneralizedNewtypeDeriving
+- ImportQualifiedPost
+- InstanceSigs
+- LambdaCase
+- MultiParamTypeClasses
+- MultiWayIf
+- NamedFieldPuns
+- NegativeLiterals
+- NumericUnderscores
+- OverloadedLabels
+- OverloadedStrings
+- PartialTypeSignatures
+- PatternSynonyms
+- RankNTypes
+- RecordWildCards
+- ScopedTypeVariables
+- StandaloneDeriving
+- TypeApplications
+- TypeFamilies
+- UndecidableInstances
+- ViewPatterns
+- TypeOperators
+- NoForeignFunctionInterface
+
+library:
+  source-dirs: src
