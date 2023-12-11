@@ -50,4 +50,3 @@ import Test.Hspec.Api.Formatters.V2
 registerGithubActionsAnnotations :: Formatter -> Config -> Config
 registerGithubActionsAnnotations format =
     registerFormatter ("github", withGithubActionFormatter format)
-

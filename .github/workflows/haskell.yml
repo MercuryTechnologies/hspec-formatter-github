@@ -68,7 +68,7 @@ jobs:
         run: cabal build all
 
       - name: Run tests
-        run: cabal test all
+        run: HSPEC_FORMAT=github cabal test all
 
       - name: Check cabal file
         run: cabal check
