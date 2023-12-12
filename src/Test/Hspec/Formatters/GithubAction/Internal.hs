@@ -71,7 +71,7 @@ errorCommandFor specPath@(_nesting, requirement) item mFailureLocation reason = 
 -- | The github actions command format.
 formatErrorCommand :: ErrorCommand -> String
 formatErrorCommand ec = mconcat
-    [ "::error "
+    [ "\n::error "
     , "title=", maybe "" escapeProperty (title ec), ","
     , "file=", maybe "" escapeProperty (file ec), ","
     , "line=", maybe "" show (line ec), ","
