@@ -2,7 +2,7 @@ name:                hspec-formatter-github
 version:             0.1.0.0
 github:              "MercuryTechnologies/hspec-formatter-github"
 license:             BSD-3-Clause
-author:              Alex Vieth, Matt von Hagen
+author:              Alex Vieth, Matt Parsons
 maintainer:          mattp@mercury.com
 copyright:           2023 Mercury Technologies
 
