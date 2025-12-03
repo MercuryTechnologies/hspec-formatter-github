@@ -25,10 +25,10 @@ jobs:
           - '8.10'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
 
       - name: Set up GHC ${{ matrix.ghc-version }}
-        uses: haskell/actions/setup@v2
+        uses: haskell/actions/setup@ce6c3a6f8cbe3bd6ce51b635b3f32ee792f22f91 # v2.4.7
         id: setup
         with:
           ghc-version: ${{ matrix.ghc-version }}
@@ -43,7 +43,7 @@ jobs:
         # The last step generates dist-newstyle/cache/plan.json for the cache key.
 
       - name: Restore cached dependencies
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3.4.3
         id: cache
         env:
           key: ${{ runner.os }}-ghc-${{ steps.setup.outputs.ghc-version }}-cabal-${{ steps.setup.outputs.cabal-version }}
@@ -57,7 +57,7 @@ jobs:
 
       # Cache dependencies already here, so that we do not have to rebuild them should the subsequent steps fail.
       - name: Save cached dependencies
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3.4.3
         # Caches are immutable, trying to save with the same key would error.
         if: ${{ steps.cache.outputs.cache-primary-key != steps.cache.outputs.cache-matched-key }}
         with:
